@@ -1,6 +1,8 @@
 package com.example.mydmeo
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -12,9 +14,8 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        findViewById<Button>(R.id.rv_zhedie).setOnClickListener { view ->
+            startActivity(Intent(this,MainActivity::class.java))
         }
     }
 }

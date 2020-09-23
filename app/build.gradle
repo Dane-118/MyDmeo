@@ -46,4 +46,8 @@ dependencies {
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 
+    implementation 'com.blankj:utilcode:1.29.0'
+
+    implementation 'com.github.vipulasri:timelineview:1.1.5'
+
 }

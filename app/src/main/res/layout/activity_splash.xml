@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SplashActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,6 +20,13 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/rv_zhedie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recycleview折叠展开"
+        />
 
 
 
