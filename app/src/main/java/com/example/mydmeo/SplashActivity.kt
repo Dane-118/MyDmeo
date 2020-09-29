@@ -6,6 +6,7 @@ import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mydmeo.activity.KotlinStudyActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -17,5 +18,10 @@ class SplashActivity : AppCompatActivity() {
         findViewById<Button>(R.id.rv_zhedie).setOnClickListener { view ->
             startActivity(Intent(this,MainActivity::class.java))
         }
+
+        findViewById<Button>(R.id.btn_kotlin).setOnClickListener { view ->
+            startActivity(Intent(this,KotlinStudyActivity::class.java))
+        }
+
     }
 }

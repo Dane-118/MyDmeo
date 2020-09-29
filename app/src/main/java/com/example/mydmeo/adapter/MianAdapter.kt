@@ -11,6 +11,9 @@ import com.example.mydmeo.entity.MainDateNode
 @description:
 @date : 2020/9/23 10:47
  */
+fun topLevelFuncion() {
+}
+
 class MianAdapter: BaseNodeAdapter() {
 
     init {
