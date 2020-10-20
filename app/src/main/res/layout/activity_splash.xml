@@ -29,6 +29,14 @@
         />
 
     <Button
+        android:id="@+id/btn_img_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片保存"
+        />
+
+
+    <Button
         android:id="@+id/btn_kotlin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
