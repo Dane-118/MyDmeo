@@ -7,8 +7,11 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.alibaba.android.arouter.launcher.ARouter
 import com.example.mydmeo.activity.ImgSaveActivity
 import com.example.mydmeo.activity.KotlinStudyActivity
+import com.example.mydmeo.bean.Person
+import com.example.mydmeo.bean.Student
 
 class SplashActivity : AppCompatActivity() {
 
@@ -21,20 +24,32 @@ class SplashActivity : AppCompatActivity() {
             this@SplashActivity,
             arrayOf(
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.READ_PHONE_STATE
+                Manifest.permission.READ_PHONE_STATE,
+                Manifest.permission.WRITE_CALENDAR,
+                Manifest.permission.READ_CALENDAR
             ),
             100
         )
 
         findViewById<Button>(R.id.rv_zhedie).setOnClickListener { view ->
-            startActivity(Intent(this, MainActivity::class.java))
+            ARouter.getInstance().build("/app/fang/MainActivity").navigation()
         }
         findViewById<Button>(R.id.btn_img_save).setOnClickListener { view ->
             startActivity(Intent(this, ImgSaveActivity::class.java))
         }
 
         findViewById<Button>(R.id.btn_kotlin).setOnClickListener { view ->
-            startActivity(Intent(this, KotlinStudyActivity::class.java))
+            ARouter.getInstance()
+                .build("/app/fang/KotlinStudyActivity")
+                .withString("name", "android")
+                .withInt("age", 5)
+                .navigation()
+        }
+
+        findViewById<Button>(R.id.btn_calebdar).setOnClickListener { view ->
+            ARouter.getInstance()
+                .build("/app/fang/CalendarActivity")
+                .navigation()
         }
 
     }
@@ -68,7 +83,6 @@ class SplashActivity : AppCompatActivity() {
             }
         }
     }
-
 
 
 }

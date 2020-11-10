@@ -7,16 +7,20 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ImgSaveActivity"></activity>
+        <activity android:name=".activity.CalendarActivity"></activity>
+        <activity android:name=".activity.MainActivity3" />
+        <activity android:name=".activity.ImgSaveActivity" />
         <activity android:name=".activity.KotlinStudyActivity" />
         <activity
             android:name=".SplashActivity"

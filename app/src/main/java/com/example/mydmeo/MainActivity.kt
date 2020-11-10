@@ -2,13 +2,18 @@ package com.example.mydmeo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.mydmeo.adapter.MianAdapter
 import com.example.mydmeo.bean.Student
 import com.example.mydmeo.entity.MainChildNode
 import com.example.mydmeo.entity.MainDateNode
 import kotlinx.android.synthetic.main.activity_main.*
+import java.math.BigDecimal
+import java.math.RoundingMode
 
+@Route(path = "/app/fang/MainActivity")
 class MainActivity : AppCompatActivity() {
 
     private var mainAdapter: MianAdapter = MianAdapter()
@@ -19,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         rv_main_zhedie?.layoutManager = LinearLayoutManager(this)
 
         rv_main_zhedie?.adapter = mainAdapter
+
+        if (BigDecimal("0.00").setScale(2, RoundingMode.HALF_UP) == BigDecimal.ZERO){
+            Log.d("TAG", "onCreate: 3333333333333333333333333333333333333")
+        }
+
+
 
         val dateList: MutableList<MainDateNode> = arrayListOf()
         for (index in 0..5) {
